@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DEMO</title>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#bt1").click(function(){
+                    var y = 0,d = 0,m = 0;
+                    var c_date = new Date();
+                    var date = new Date($("#i3").val()+ "-" + $("#i2").val() + "-" + $("#i1").val());
+                    d = (Math.floor((c_date-date)/(1000 * 60 * 60 * 24)));
+                    m = (Math.floor((d)/31));
+                    y = (Math.floor((m)/12));
+                    $("#h3").text("Age : "+y+" Years , "+m%12+" Months , "+d%31+" Days ");
+        });
+    });
+        </script>
+    </head>
+    <body>
+        <h1>Age Calculator</h1>
+        <div id="box">
+            <h2>Enter the Birth Date</h2>
+            <div id="cal">
+                <label for="day">Day</label>
+                <input type="number" name="day" id="i1" max="31" min="0">
+                <label for="month">Month</label>
+                <input type="number" name="month" id="i2" max="12" min="0" >
+                <label for="Year">Year</label>
+                <input type="number" name="year" id="i3" min="1999" max="2010">
+            </div>
+            <input type="button" value="Calculate" id="bt1">
+        </div>
+        <div id="out">
+            <h3 id="h3">Age : </h3>
+        </div>
+    </body>
+</html>

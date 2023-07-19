@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body ng-app="myApp" ng-controller="myCtrl">
+        <div>
+            <div>
+                <div>
+                <div>Sign In</div>
+            </div>
+            <div>
+                <div>
+                    <form name="myForm">
+                        <label for="UserName">Username : </label>
+                        <input type="text" class="form-control" name="userName" pattern="[a-z. A-Z]{1,}"> 
+                        <span class="text-danger" ng-show="myForm.userName.$error.required">Name is Required</span>
+                        <span class="text-danger" ng-show="myForm.userName.$error.pattern">Name is Invalid</span>
+                        <label for="Password">Password : </label>
+                    <input type="password" class="form-control">
+                    <div><button>SUBMIT</button></div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+       
+        
+</html>

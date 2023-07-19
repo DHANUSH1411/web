@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible"content="IE=edge">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h1 align="center">Resume Form</h1>
+<form style="text-align: justify;">
+<fieldset>
+<legend align="center">Personal details</legend>
+<p align="center">
+<label for="fname">First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="text"id="fname" required>
+</p>
+<p align="center">
+<label for="mname">Middle Name:&nbsp;&nbsp;</label>
+<input type="text"id="mname" required>
+</p>
+<p align="center">
+<label for="lname">Last Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="text"id="lname" required>
+</p>
+<p align="center">
+<label for="dob">Date of Birth:&nbsp;&nbsp;</label>
+<input type="date"id="dob" required>
+</p>
+<p align="center">
+<label for="age">Age in Years:&nbsp;&nbsp;</label>
+<input type="number"id="age"placeholder="" required>
+</p>
+<p align="center">
+Gender:<input type="radio"id="male"name="gender">
+<label for="male">Male</label>
+<input type="radio"id="female"name="gender" required>
+<label for="female">Female</label>
+</p>
+</fieldset>
+<fieldset>
+<legend align="center">Address details</legend>
+<address align="center">
+<label for="Address">Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="Address"id="message" required>
+</address>
+<p align="center">
+<label for="city">City/Town:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="text"id="city" required>
+</p>
+<p align="center">
+<label for="state">State:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="text"id="state" required>
+</p>
+<p align="center">
+<label for="Zip code">Date of Birth:</label>
+<input type="number"id="Zip code" required>
+</p>
+</fieldset>
+<fieldset>
+<legend align="Center">Contact information</legend>
+<p align="center">
+<label for="Telephone">Telephone:</label>
+<input type="tel"id="Phone" required>
+</p>
+<p align="center">
+<label for="Phone">Mobile:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="tel"id="phone" required>
+</p>
+<p align="center">
+<label for="Email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="email"id="email" required>
+</p>
+<p align="center">
+<label for="website">website:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input type="url"id="website" required>
+</p>
+</fieldset>
+<fieldset>
+<legend align="center">Educational Details</legend>
+<table border="3"align="center">
+<tr bgcolor="#cccccc">
+<th>Qualification</th>
+<th>Board/University</th>
+<th>Country</th>
+<th>Starting Years</th>
+<th>Ending Year</th>
+<th>Percentage</th>
+</tr>
+<tr>
+<td style="background-color: white;"><input type="checkbox">10th</td>
+<td><input type="text"placeholder="Borad/University" required></td>
+<td>
+<select name="country"id="country">
+<option value="choose">Choose</option>
+<option value="India">India</option>
+<option value="England">England</option>
+<option value="South Africa">South Africa</option>
+<option value="Australia">Australia</option>
+</select>
+</td>
+<td><input type="date"></td>
+<td><input type="date"></td>
+<td><input type="number"placeholder="in %" required></td>
+</tr>
+<tr bgcolor="white">
+<td bgcolor="white"><input type="checkbox">12th</td>
+<td bgcolor="white"><input
+type="text"placeholder="Borad/University"></td>
+<td bgcolor="white">
+<select name="country"id="country">
+<option value="choose">Choose</option>
+<option value="India">India</option>
+<option value="England">England</option>
+<option value="South Africa">South Africa</option>
+<option value="Australia">Australia</option>
+</select>
+</td>
+<td bgcolor="white"><input type="date"></td>
+<td bgcolor="white"><input type="date"></td>
+<td bgcolor="white"><input
+type="number"placeholder="in %"></td>
+</table>
+</fieldset>
+<fieldset>
+<p align="center">Attach your Resume in .doc or .pdf format:<input
+type="file"name="resume"></p>
+<p align="center"><input type="checkbox">I fill all the 
+details</p>
+</fieldset>
+<p align="center">
+<input type="submit"name="send details" required>
+</p>
+</form>
+</body>
+</html>

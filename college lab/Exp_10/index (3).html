@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign up page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body style="background: linear-gradient(to bottom right,rgb(177, 255, 230), rgb(170, 170, 254)); height: 1080px;">
+    <div class="d-flex justify-content-center m-5">
+        <div class="shadow bg-white rounded-1 p-3 col-5">
+            <h3 class="border-bottom-2 border-1 border-dark text-center my-1">User Registration Form</h3>
+            <br>
+            <div class="form-group px-2 text-center">
+                <form action="/save" method="POST">
+                    <table class="table col-6 table-borderless">
+                        <tr>
+                            <td class="col-2">Name : </td>
+                            <td class="col-4"><input type="text" name="username" class="form-control-sm" required></td>
+                        </tr>
+                        <tr>
+                            <td class="col-2">Password : </td>
+                            <td class="col-4"><input type="password" name="password" class="form-control-sm" required></td>
+                        </tr>
+                        <tr>
+                            <td class="col-2">Age : </td>
+                            <td class="col-4"><input type="number" name="age" class="form-control-sm" min="18" required></td>
+                        </tr>
+                        <tr>
+                            <td class="col-2">Mobile : </td>
+                            <td class="col-4"><input type="number" name="mobile" class="form-control-sm" required></td>
+                        </tr>
+                        <tr>
+                            <td class="col-2">Email : </td>
+                            <td class="col-4"><input type="email" name="email"  class="form-control-sm" required></td>
+                        </tr>
+                        <tr>
+                            <td class="col-2">Gender : </td>
+                            <td class="col-4">
+                                <input type="radio" name="gender" value="male" class="form-check-inline" required>Male
+                                <input type="radio" name="gender" value="female" class="form-check-inline mx-3" required>Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-2">State : </td>
+                            <td class="col-4">
+                                <select name="state" class="col-9 form-select-sm" required>
+                                    <option value="tamilnadu">Tamil Nadu</option>
+                                    <option value="kerla">Kerla</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Submit" class="btn btn-primary shadow-lg mb-2">
+                </form>
+                <a href="/view" class="">View All User Details</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+</table>
+
+</table>

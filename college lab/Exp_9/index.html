@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+        
+
+    <body ng-app="myApp">
+        <nav>
+            <a href="#/!">About</a>
+            <a href="#!acadamic_details">Acadamic Details</a>
+            <a href="#!project_details">Project</a>
+            <a href="#!sign_in">Sign In</a>
+            <a href="#!sign_up">Sign Up</a>
+        </nav>
+        <div ng-view></div>
+        <script>  
+          var app = angular.module("myApp", ["ngRoute"]);
+            app.config(function($routeProvider) {
+              $routeProvider
+              .when("/", {
+                templateUrl : "main.html"
+              })
+              .when("/acadamic_details", {
+                templateUrl : "acadamic_details.html"
+              })
+              .when("/project_details", {
+                templateUrl : "project_details.html"
+              })
+              .when("/sign_in", {
+                templateUrl : "sign_in.html"
+              })
+              .when("/sign_up", {
+                templateUrl : "sign_up.html"
+              });
+            });
+            </script>
+      
+              
+
+      </body>
+</html>

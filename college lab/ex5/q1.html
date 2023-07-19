@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="q1.css">
+    <script>
+     function calculate(){
+       var bmi;
+       var cat;
+       var result = document.getElementById("result");
+       var w= parseInt(document.getElementById("weight").value);
+       var h= parseInt(document.getElementById("height").value);
+       bmi = (w/Math.pow((h/100),2)).toFixed(1); 
+       result.innerHTML = bmi;     
+       if(bmi< 18){
+       
+        document.getElementById("category").innerHTML= "UnderWeight"; 
+     }
+     else if(bmi >= 18 && bmi <= 25){
+        cat = "Normal";
+        document.getElementById("category").innerHTML= cat;
+     }
+     else if(bmi >= 25 && bmi <= 30){
+        cat = "OverWeight";
+        document.getElementById("category").innerHTML= cat;
+     }
+       else{
+         cat = "Obese";
+         document.getElementById("category").innerHTML= cat;
+       }
+      }
+
+    </script>
+</head>
+<body>
+    <div class="Container">
+        <div class="top">
+            <h1>BMI Calculator</h1>
+        </div>
+        <div class="display">
+            <p id ="result">0.0</p>
+            <p id ="category">Category</p>
+        </div>
+        <form class="container2">
+                        <label for="weight">Weight</label>
+                        <input type="text" id="weight" placeholder="Weight:Kg"><br>
+                        <label for="height">Height</label>
+                        <input type="text" id="height" placeholder="Height:cm"><br>
+            <input type="button" value="Calculate" onkeyup="calculate()">
+        </form>
+    </div>
+</body>
+</html>

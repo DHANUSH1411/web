@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+      var app = angular.module('myApp', []);
+      app.controller("myCtrl", function($scope){
+          $scope.arr = [];
+          $scope.myFunc =  function(){
+            $scope.arr.push({name:$scope.i1, price:$scope.i2});
+          }
+          $scope.removeItem = function($index){
+            $scope.arr.splice($index, 1);
+          }
+      });
+  </script>
+  <body ng-app="myApp" ng-controller="myCtrl" style="text-align: center;">
+    <h1>Product Inventory System</h1>
+    <div>
+      <div>
+        <label for="name">Product Name</label>
+        <input type="text" name="name" ng-model="i1" value="10"
+          required><br>
+        <label for="price">Product Price</label>
+        <input type="number" name="price" ng-model="i2" value="10"
+          min="0"><br>
+        <div>
+          <input type="button" value="Add Product" ng-click="myFunc()">
+        </div>
+      </div>
+    </div>
+    <hr>
+    <hr>
+    <div>
+      <div >
+        <table  ng-model="table" style="margin-left: 500px;">
+          <thead class="table-dark">
+            <tr>
+              <th style="padding: 20px;">Name</th>
+              <th style="padding: 20px;">Price</th>
+              <th style="padding: 20px;">Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="x in arr track by $index">
+              <td style="padding: 20px;">{{x.name}}</td>
+              <td style="padding: 20px;">{{x.price}}</td>
+              <td style="padding: 20px;"><button value="Delete" ng-click="removeItem($index)"></button></td>
+            </tr> 
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

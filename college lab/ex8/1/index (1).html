@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body ng-app="myApp" ng-controller="myCtrl" style="text-align: center;">
+    <h1>Grade Evaluation</h1>
+    <form action=""><br>
+      <label for="name">Name : </label>
+      <input type="text" name="name" ng-model="i1" placeholder="enter your name"><br><br>
+      <label for="regno">RegNo : </label>
+      <input type="number" name="regno" ng-model="i2" placeholder="last four number"><br><br>
+      <label for="c1">Course 1 MARKS(for 100): </label>
+      <input type="number" name="c1" ng-model="i3" min="1" max="100"ng-change='fun(i3,"i3")'><br><br>
+      <label for="c2">Course 2 MARKS(for 100): </label>
+      <input type="number" name="c2" ng-model="i4" min="1" max="100"ng-change='fun(i4,"i4")'><br><br>
+      <label for="c3">Course 3 MARKS(for 100): </label>
+      <input type="number" name="c3" ng-model="i5" min="1" max="100"ng-change='fun(i5,"i5")'><br><br>
+      <label for="c4">Course 4 MARKS(for 100): </label>
+      <input type="number" name="c4" ng-model="i6" min="1" max="100"ng-change='fun(i6,"i6")'><br><br>
+      <label for="c5">Course 5 MARKS(for 100): </label>
+      <input type="number" name="c5" ng-model="i7" min="1" max="100"ng-change='fun(i7,"i7")'><br><br>
+      <input type="button" value="CALCULATE" ng-click="myFunc()">
+    </form>  
+    <script>    
+      var app = angular.module("myApp", []);
+      app.controller("myCtrl", function($scope){
+        $scope.myFunc = function() {
+        var m1 = parseInt($scope.i3);
+        var m2 = parseInt($scope.i4);
+        var m3 = parseInt($scope.i5);
+        var m4 = parseInt($scope.i6);
+        var m5 = parseInt($scope.i7);
+        var t=m1+m2+m3+m4+m5;
+        $scope.tot=t;}
+      $scope.fun=function(a,b){
+        if(a<=100 && a>=0){
+        if(a>=95){
+          document.getElementById(b).innerHTML="S";       
+        }
+        else if(a<95 & a>=85){
+          document.getElementById(b).innerHTML="A";
+        }
+        else if(a<85 & a>=75){
+          document.getElementById(b).innerHTML="B";
+        }
+        else if(a<75 & a>=65){
+          document.getElementById(b).innerHTML="C";
+        }
+        else if(a<65 & a>=50){
+          document.getElementById(b).innerHTML="P";
+        }
+        else{
+          document.getElementById(b).innerHTML="F";
+        }
+      }
+      else{
+        alert("text box cant be empty or '''values cant be greater than 100 or less than 0'''");
+      }
+      }
+        });
+    </script>
+    <div>
+    <table border="1px" style="width: 70%;margin-left: 200px;height: 100px;" >
+      <tr>
+        <td id="i3" style="padding: 10px;"></td><td id="i4" style="padding: 10px;"></td><td id="i5" style="padding: 10px;"></td><td id="i6" style="padding: 10px;"></td><td id="i7" style="padding: 10px;"></td>
+      </tr>
+    </table></div>
+    <div>
+      <h1>TOTAL SCORED</h1><br>
+      <h1>{{tot}}</h1>
+    </div>
+  </body>
+</html>

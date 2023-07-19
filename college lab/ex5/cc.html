@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function convert() {
+            let amount = document.getElementById("amt").value
+    
+            let s1 = document.getElementById("select1").value
+            let s2 = document.getElementById("select2").value
+
+            if (s1 === "USD" && s2 === "INR" ) 
+                document.getElementById("result").innerHTML = (amount * 81.52);
+
+            if (s1 === "USD" && s2 === "JPY" ) 
+                document.getElementById("result").innerHTML = (amount * 129.83);
+
+            if (s1 === "USD" && s2 === "GBP" ) 
+            document.getElementById("result").innerHTML = (amount * 0.81);
+
+            if (s1 === "INR" && s2 === "USD" ) 
+            document.getElementById("result").innerHTML = (amount * 0.012);
+            if (s1 === "INR" && s2 === "JPY" ) 
+            document.getElementById("result").innerHTML = (amount * 1.59);
+            if (s1 === "INR" && s2 === "GBP" ) 
+            document.getElementById("result").innerHTML = (amount * 0.0099);        
+        }
+    </script>
+</head>
+<body>       
+<div style="transform: translate(600px,200px);border: solid 1px;width: 400px;height: 200px;padding-left: 20px;border-color: greenyellow;">
+    <h2>Currency Converter</h2>
+    <form>
+      <div>
+        <label for="amt">Amount:</label>
+        <input type="text" id="amt" placeholder="Enter the amount..." name="amount">
+      </div>
+
+      <div onchange="convert()">
+        <label for="amt">From: </label>
+        <select id="select1">
+        <option value="USD">USD (U.S. Dollar)</option>
+        <option value="INR">INR (Indian Rupee)</option>
+        <option value="JPY">JPY (Japanese Yen)</option>
+        <option value="GBP">GBP (British Pound)</option>
+      </select>
+
+      <div onchange="convert()">
+        <label for="amt">To: </label>
+        <select id="select2">
+        <option value="USD">USD (U.S. Dollar)</option>
+        <option value="INR">INR ((Indian Rupee))</option>
+        <option value="JPY">JPY (Japanese Yen)</option>
+        <option value="GBP">GBP (British Pound)</option>
+      </select>
+
+      </div><br>
+      
+      <div>
+        <h3 id="result" class="primary"><span style="width: 400px; height: 80px;">Result</span></h3>
+      </div>
+
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

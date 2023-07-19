@@ -1,0 +1,203 @@
+
+.navbar{
+}*{
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+body{
+	background: url("G:/images/karunya.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.navbar{
+	position: relative;
+	padding-left: 50px;
+	}
+.pd1{
+	color: black;
+	font-size: 30px;
+	padding-left: 250px;
+	padding-right: 250px;
+	padding-top: 100px;
+}
+body div img{
+float: right;
+
+}
+.pd{
+	font-size: 40px;
+	padding-top: 100px;
+	padding-left: 250px;
+	padding-right: 250px;
+	color: skyblue;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.nav-container{
+	background-color: skyblue;
+	height: 15vh;
+}
+nav{
+	background-color: skyblue;
+	height: 100%;
+	width: 95%;
+	margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo img{
+    margin-top: 5px;
+	height: 90%;
+}
+h1{
+	color: white;
+	font-size: 40px;
+	transform: translate(-300px,35px);
+	position: fixed;
+}
+.arrow{
+	height: 30px;
+	width: 40px;
+	margin-top: 35px;
+
+	background-color:skyblue;
+	display: none;
+}
+.line1,.line2,.line3{
+	height: 33%;
+	width: 100%;
+	margin-top: 2px;
+	border-radius: 10px;
+	background-color: white;
+}
+.nav-links{
+	width: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+ul li a{
+	color: white;
+	font-size: 20px;
+}
+ul li a:hover{
+	color: black;
+	font-size: 22px;
+	transition: 0.5s;
+}
+@media screen and (max-width: 1250px){
+	h1{
+		transform: translate(50px,0px);
+		transition: 5s;
+		color: black;
+	}
+	.nav-links{
+		transform: rotate3d(10, 10, 1, 360deg);
+		transition: 5s;
+	}
+	ul li a{
+		color: green;
+		transition: 2s;
+	}
+}
+@media screen and (max-width: 1150px){
+	h1{
+		transform: translate(-200px,30px);
+		color: white;
+	}
+	ul li a{
+		color: white;
+		transition: 2s;
+	}
+}
+
+@media screen and (max-width: 1050px){
+	.nav-links{
+		width:50% ;
+	}
+
+	h1{
+		transform: translate(-170px,30px);
+		transition: 1.0s;
+		position: fixed;
+	}
+}
+@media screen and (max-width: 990px){
+	.nav-links{
+		width:60% ;
+		transition: 2.2s;
+	}
+
+       h1{
+		transform: translate(-85px,30px);
+		transition: 2.0s;
+		position: fixed;
+		color: white;
+	}
+	ul li a{
+		color: white;
+		transition: 2s;
+	}
+}
+@media screen and (max-width: 750px){
+	.nav-links{
+		display: none;
+	}
+	h1{
+		transform: translate(-250px,30px);
+		transition: 1s;
+		position: fixed;
+		
+	}
+	.arrow{
+		display: block;
+	}
+}
+@media screen and (max-width: 677px){
+	.nav-links{
+		display: none;
+	}
+	h1{
+		transform: translate(-200px,30px);
+		transition: 1s;
+		position: fixed;
+		
+	}
+	.arrow{
+		display: block;
+	}
+}
+@media screen and (max-width: 575px){
+	.nav-links{
+		display: none;
+	}
+	h1{
+		transform: translate(-150px,30px);
+		transition: 1s;
+		position: fixed;
+		
+	}
+	.arrow{
+		display: block;
+	}
+}
+@media screen and (max-width: 470px){
+	.nav-links{
+		display: none;
+	}
+	h1{
+		transform: translate(-120px,30px);
+		transition: 1s;
+	}
+@media screen and (max-width: 406px){
+*{
+	display: none;
+}
+	
+}

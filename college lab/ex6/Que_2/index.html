@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Q2</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function start(){
+                p=10;
+                id=setInterval(d,20);
+               function d(){
+                if(p>=1110){
+                    document.getElementById("danger").style.opacity=1;
+                }
+                else{
+                    document.getElementById("car").style.left=p+"px";
+                    p=p+10;
+                }
+               }
+            }
+            function stop(){
+                clearInterval(id);
+            }
+            function reset(){
+                document.getElementById("car").style.left=10+"px";
+                clearInterval(id);
+                document.getElementById("danger").style.opacity=0;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="end">..</div>
+        <div id="danger">Danger</div>
+        <img src="car.png" style="height: 150px; display:block; position:absolute;top:80px;" id="car">
+        <div class="button" id="button" style="position:relative; display:inline-block;">
+            <input type="button" id="b1" value="Start" onclick="start()">
+            <input type="button" id="b2" value="Stop" onclick="stop()">
+            <input type="button" id="b3" value="Reset" onclick="reset()">
+        </div>
+
+    </body>
+</html>
